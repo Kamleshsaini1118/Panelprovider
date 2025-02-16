@@ -305,15 +305,15 @@ const ContactSection = () => {
           <div className="flex flex-col gap-3 mt-5 md:mt-0">
             <a
               className="flex items-center bg-[#4EC95C] text-black px-6 py-2 rounded-full shadow-lg hover:bg-white hover:scale-105 transition text-lg"
-              href="https://wa.link/0doqo8"
+              href="https://wa.link/qnz6f1"
             >
-              <FaWhatsapp size={22} className="mr-2" /> +91 12345678944
+              <FaWhatsapp size={22} className="mr-2" /> +91 8290595394
             </a>
             <a
               className="flex items-center bg-[#4EC95C] text-black px-6 py-2 rounded-full shadow-lg hover:bg-white hover:scale-105 transition text-lg"
-              href="https://api.whatsapp.com/send?phone=447520609000&amp;text=Hi"
+              href="https://wa.link/qnz6f1"
             >
-              <FaWhatsapp size={22} className="mr-2" /> +91 1234567890
+              <FaWhatsapp size={22} className="mr-2" /> +91 8290595394
             </a>
           </div>
         </div>

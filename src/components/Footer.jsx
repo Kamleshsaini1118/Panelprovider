@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
     <section
-      className="bg-white py-6 bg-no-repeat bg-cover bg-center"
+      className="bg-white py-20 bg-no-repeat bg-cover bg-center "
       style={{
         backgroundImage: "url('/f.jpg')",
       }}
