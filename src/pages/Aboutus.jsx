@@ -102,11 +102,11 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="bg-gray-100 h-auto">
+    <div className="bg-[#0a1128] h-auto">
       <section className="container mx-auto p-6">
         <div className="flex flex-col items-center justify-center mt-20 md:mt-28 gap-4">
-          <h2 className="text-4xl font-bold">About Us</h2>
-          <span className="flex text-lg gap-x-2 font-medium">
+          <h2 className="text-4xl font-bold text-white">About Us</h2>
+          <span className="flex text-lg gap-x-2 font-medium text-white">
             HOME <FaChevronRight size={18} className="mt-1" /> ABOUT US
           </span>
         </div>
@@ -122,11 +122,11 @@ const AboutUs = () => {
             </button>
 
             {/* Image Slider */}
-              <img
-                className="rounded-lg shadow-lg w-full h-full object-cover transition-all duration-500"
-                src={images[currentIndex]}
-                alt="Patel Panel"
-              />
+            <img
+              className="rounded-lg shadow-lg w-full h-full object-cover transition-all duration-500"
+              src={images[currentIndex]}
+              alt="Patel Panel"
+            />
 
             {/* Right Arrow - Outside Image */}
             <button
@@ -142,35 +142,37 @@ const AboutUs = () => {
             <h2 className="text-2xl md:text-5xl font-bold text-[#FFB90C] text-left">
               Patel Panel Provider
             </h2>
-            <p className="text-lg text-gray-600 mt-2 text-left">
+            <p className="text-lg text-white mt-8 text-left">
               India’s Biggest Panel Provider
             </p>
-            <p className="text-gray-700 mt-4 text-left">
-              <strong>The Name Of Trusted Brand</strong>
+            <p className="text-white mt-4 text-left">
+              <em>
+                <strong>The Name Of Trusted Brand</strong>
+              </em>
               <br />
               जिस साइड का पैनल चाहिए उसका लिंक कॉपी करके सेंड कर दें रेट बता
               दिया जाएगा आपको, क्योंकि सबका रेट अलग-अलग है।
             </p>
-            <p className="text-gray-700 mt-2 text-left">
+            <p className="text-white mt-2 text-left">
               We are India’s Biggest Panel Provider like; Sports Club, Rental,
               Sharing, Super Admin, Admin, SMDL, MDL, DL, etc. at low rates.
             </p>
-            <ul className="mt-4 space-y-2 text-left">
+            <ul className="mt-4 space-y-2 text-left text-white">
               <li className="flex items-center gap-x-2">
                 <span className="bg-[#FFB90C] rounded-full p-1">
-                  <FaCheck size={14} />
+                  <FaCheck size={14} className="text-black" />
                 </span>
                 Master Panel Provider & Rental Site Available 100% Trusted
               </li>
               <li className="flex items-center gap-x-2">
                 <span className="bg-[#FFB90C] rounded-full p-1">
-                  <FaCheck size={14} />
+                  <FaCheck size={14} className="text-black" />
                 </span>
                 SUPER ADMIN, ADMIN- SMDL-MDL-DL
               </li>
               <li className="flex items-center gap-x-2">
                 <span className="bg-[#FFB90C] rounded-full p-1">
-                  <FaCheck size={14} />
+                  <FaCheck size={14} className="text-black" />
                 </span>
                 24x7 Services Available
               </li>
