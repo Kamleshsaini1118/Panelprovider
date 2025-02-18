@@ -299,7 +299,7 @@ const HomeSection = () => {
               href={service.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-5 py-2 sm:px-8 sm:py-2 bg-[#FFB90C] hover:bg-white rounded-full text-black text-[18px] sm:text-[18px] font-normal transition duration-200 transform hover:scale-105 gap-x-2"
+              className="flex items-center justify-center px-5 py-2 sm:px-8 sm:py-1 bg-[#FFB90C] hover:bg-white rounded-full text-black text-[18px] sm:text-[18px] font-normal transition duration-200 transform hover:scale-105 gap-x-2"
             >
               {service.text}
               <IoIosArrowDroprightCircle size={22} />

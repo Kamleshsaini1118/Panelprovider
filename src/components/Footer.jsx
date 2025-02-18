@@ -35,7 +35,7 @@ const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white hover:opacity-80"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-yellow-600 hover:text-black"
             >
               <FaFacebookF />
             </a>
@@ -44,7 +44,7 @@ const Footer = () => {
               href="https://www.instagram.com/patel_panel_provider?igsh=MWoxbDBqYjNqNWg0OA%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white hover:opacity-80"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-yellow-600 hover:text-black"
             >
               <FaInstagram />
             </a>

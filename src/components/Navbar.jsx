@@ -77,6 +77,7 @@
 // export default Navbar;
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 
 const Navbar = () => {
@@ -87,18 +88,18 @@ const Navbar = () => {
     <header className="w-full fixed top-0 left-0 shadow-md z-50 bg-[#0a1128]">
       <div className="container mx-auto flex items-center justify-between px-6 py-4 md:px-20">
         {/* Logo */}
-        <a href="#" className=" md:pl-5">
+        <Link to="/" className=" md:pl-5">
           <img src="/logo.png" alt="Logo" className="w-[140px] md:w-[200px]" />
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 text-white text-lg">
-          <a href="/" className="hover:text-[#FFB90C]">
+          <Link to="/" className="hover:text-[#FFB90C]">
             Home
-          </a>
-          <a href="/about-us" className="hover:text-[#FFB90C]">
+          </Link>
+          <Link to="/about" className="hover:text-[#FFB90C]">
             About Us
-          </a>
+          </Link>
 
           {/* Dropdown */}
           {/* <div className="relative group ">
@@ -182,20 +183,20 @@ const Navbar = () => {
         </button> */}
 
         <nav className="flex flex-col items-start p-6 space-y-4 text-white mt-16">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="hover:text-[#FFB90C]"
             onClick={() => setMenuOpen(false)}
           >
             Home
-          </a>
-          <a
-            href="/about-us"
+          </Link>
+          <Link
+            to="/about"
             className="hover:text-[#FFB90C]"
             onClick={() => setMenuOpen(false)}
           >
             About Us
-          </a>
+          </Link>
 
           {/* Mobile Dropdown */}
           <div className="w-full">
