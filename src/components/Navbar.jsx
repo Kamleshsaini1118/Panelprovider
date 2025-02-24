@@ -85,13 +85,13 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <header className="w-full fixed top-0 left-0 shadow-md z-50 bg-[#0a1128]">
-      <div className="container mx-auto flex items-center justify-between px-6 py-2 md:px-20 fixed top-0 left-0 right-0 bg-[#0a1128] z-50">
+    <header className="w-full fixed top-0 left-0 shadow-md z-50  bg-[#0a1128]">
+      <div className="container mx-auto flex items-center justify-between px-6 py-2 md:px-20 fixed top-0 left-0 right-0 bg-[#0a1128] z-50 border-b-[1px] border-zinc-500">
         {/* Logo */}
         <Link to="/" className=" md:pl-5">
           {/* <img src="/l.png" alt="Logo" className="w-[170px] md:w-[280px] -my-10 md:-my-[70px] " /> */}
           <div className="flex flex-col items-center">
-          <h1 className="text-white text-4xl md:text-5xl font-semibold font-['Schibsted Grotesk'] ">J <span className="text-[#FFB90C]">P</span> R</h1>
+          <h1 className="text-white text-[36px] leading-7 md:leading-9 md:text-[48px] font-semibold font-['Schibsted Grotesk'] ">J <span className="text-[#FFB90C]">P</span> R</h1>
           <p className="text-black text-[9px] md:text-xs font-extrabold bg-[#FFB90C]">- PANEL PROVIDER -</p>
           </div>
           

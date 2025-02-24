@@ -104,9 +104,9 @@ const AboutUs = () => {
   return (
     <div className="bg-[#0a1128] h-auto">
       <section className="container mx-auto p-6">
-        <div className="flex flex-col items-center justify-center mt-20 md:mt-28 gap-4">
-          <h2 className="text-4xl font-bold text-white">About Us</h2>
-          <span className="flex text-lg gap-x-2 font-medium text-white">
+        <div className="flex flex-col items-center justify-center mt-16 md:mt-28 gap-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">About Us</h2>
+          <span className="flex text-base md:text-lg gap-x-2 font-medium text-white">
             HOME <FaChevronRight size={18} className="mt-1" /> ABOUT US
           </span>
         </div>

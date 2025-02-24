@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <>
     <section
-      className="bg-white py-20 bg-no-repeat bg-cover bg-center "
-      style={{
-        backgroundImage: "url('/f.jpg')",
-      }}
+      className="bg-[#0a1128] border-t-[1px] border-zinc-500 py-20 bg-no-repeat bg-cover bg-center "
+      // style={{
+      //   backgroundImage: "url('/f.jpg')",
+      // }}
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
@@ -60,7 +60,7 @@ const Footer = () => {
 
      {/* 🔹 Copyright Section with Gradient Background */}
      <div className="w-full text-center py-6 text-white text-lg font-medium bg-gradient-to-br from-[#020205] via-[#111a2e] to-[#000000]">
-       Copyright © <span className="text-[#FFB90C]">2025</span> Vishal Panel Provider.
+       Copyright © <span className="text-[#FFB90C]">2025</span> JPR Panel Provider.
      </div>
      </>
   );
