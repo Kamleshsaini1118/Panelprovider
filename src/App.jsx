@@ -5,6 +5,7 @@ import AboutUs from "./pages/Aboutus";
 // import ContactUs from "./pages/ContactUs"; // Contact Us page ka bhi route chahiye
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          {/* <Route path="/contact" element={<ContactUs />} /> */}
+          <Route path="/contact-us" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

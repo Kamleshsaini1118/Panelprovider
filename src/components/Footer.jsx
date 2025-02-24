@@ -16,9 +16,9 @@ const Footer = () => {
           <div className="mb-4">
             <a href="#">
               <img
-                src="/logo.png"
+                src="/l.png"
                 alt="Patel Panel Logo"
-                className="w-[277px] h-auto "
+                className="w-[277px] -my-16 "
               />
             </a>
           </div>

@@ -86,10 +86,15 @@ const Navbar = () => {
 
   return (
     <header className="w-full fixed top-0 left-0 shadow-md z-50 bg-[#0a1128]">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4 md:px-20">
+      <div className="container mx-auto flex items-center justify-between px-6 py-2 md:px-20 fixed top-0 left-0 right-0 bg-[#0a1128] z-50">
         {/* Logo */}
         <Link to="/" className=" md:pl-5">
-          <img src="/logo.png" alt="Logo" className="w-[140px] md:w-[200px]" />
+          {/* <img src="/l.png" alt="Logo" className="w-[170px] md:w-[280px] -my-10 md:-my-[70px] " /> */}
+          <div className="flex flex-col items-center">
+          <h1 className="text-white text-4xl md:text-5xl font-semibold font-['Schibsted Grotesk'] ">J <span className="text-[#FFB90C]">P</span> R</h1>
+          <p className="text-black text-[9px] md:text-xs font-extrabold bg-[#FFB90C]">- PANEL PROVIDER -</p>
+          </div>
+          
         </Link>
 
         {/* Desktop Menu */}
@@ -101,19 +106,9 @@ const Navbar = () => {
             About Us
           </Link>
 
-          {/* Dropdown */}
-          {/* <div className="relative group ">
-            <button className="hover:text-[#FFB90C] flex gap-2">Our Services <span className="mt-1"><FaChevronDown size={20}/></span></button>
-            <ul className="absolute left-0 mt-2 hidden group-hover:block bg-[#0a1128] text-white shadow-md py-2 w-48">
-              <li><a href="/sharing-sites-list" className="block px-4 py-2 hover:bg-gray-200">Sharing Sites List</a></li>
-              <li><a href="/rental-sites-list" className="block px-4 py-2 hover:bg-gray-200">Rental Sites List</a></li>
-              <li><a href="/self-deposit-and-withdrawal" className="block px-4 py-2 hover:bg-gray-200">Self Deposit & Withdrawal</a></li>
-            </ul>
-          </div> */}
-
           <div className="relative group">
             <button className="hover:text-[#FFB90C] flex gap-2">
-              Our Services{" "}
+              Our Services
               <span className="mt-1">
                 <FaChevronDown size={20} />
               </span>
