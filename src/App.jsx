@@ -6,6 +6,7 @@ import AboutUs from "./pages/Aboutus";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ContactPage from "./pages/ContactPage";
+import DepositPage from "./pages/DepositPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/self-deposit-and-withdrawal" element={<DepositPage />} />
         </Routes>
         <Footer />
       </div>
