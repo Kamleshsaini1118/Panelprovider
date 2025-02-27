@@ -118,7 +118,7 @@ const Navbar = () => {
           {/* Mobile Dropdown */}
           <div className="w-full">
             <button
-              className="w-full text-left hover:text-[#FFB90C] flex justify-between"
+              className="w-full text-left  flex justify-between"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               Our Services <span>{dropdownOpen ? "▲" : "▼"}</span>
@@ -131,7 +131,7 @@ const Navbar = () => {
               <li>
                 <Link
                  to="/sharing-sites-list"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:text-[#FFB90C]"
                 >
                   Sharing Sites List
                 </Link>
@@ -139,7 +139,7 @@ const Navbar = () => {
               <li>
                 <Link
                  to="/rental-sites-list"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:text-[#FFB90C]"
                 >
                   Rental Sites List
                 </Link>
@@ -147,7 +147,7 @@ const Navbar = () => {
               <li>
                 <Link
                  to="/self-deposit-and-withdrawal"
-                  className="block px-4 py-2 hover:bg-gray-200"
+                  className="block px-4 py-2 hover:text-[#FFB90C]"
                 >
                   Self Deposit & Withdrawal
                 </Link>

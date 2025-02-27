@@ -1,97 +1,116 @@
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import "./App.css";
+// import Home from "./pages/Home"; // Home.jsx ko import karein
+// import AboutUs from "./pages/Aboutus";
+// // import ContactUs from "./pages/ContactUs"; // Contact Us page ka bhi route chahiye
+// import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar";
+// import ContactPage from "./pages/ContactPage";
+// import DepositPage from "./pages/DepositPage";
+// import RentalSite from "./pages/RentalSite";
+
+// function App() {
+//   return (
+//     <Router>
+//       <div className="main bg-black">
+//         <Navbar />
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<AboutUs />} />
+//           <Route path="/contact-us" element={<ContactPage />} />
+//           <Route path="/self-deposit-and-withdrawal" element={<DepositPage />} />
+//           <Route path="/rental-sites-list" element={<RentalSite />} />
+//         </Routes>
+//         <Footer />
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./App.css";
-import Home from "./pages/Home"; // Home.jsx ko import karein
+import Home from "./pages/Home";
 import AboutUs from "./pages/Aboutus";
-// import ContactUs from "./pages/ContactUs"; // Contact Us page ka bhi route chahiye
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ContactPage from "./pages/ContactPage";
 import DepositPage from "./pages/DepositPage";
+import RentalSite from "./pages/RentalSite";
+import ShareSite from "./pages/ShareSite";
+// import logo from "/src/assets/logo.png"; // Apna logo import karein
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [showSkeleton, setShowSkeleton] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSkeleton(true); // 2 sec baad skeleton show karega
+    }, 2000);
+
+    setTimeout(() => {
+      setLoading(false); // 4 sec baad app load hoga
+    }, 4000);
+  }, []);
+
   return (
     <Router>
-      <div className="main bg-black">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactPage />} />
-          <Route path="/self-deposit-and-withdrawal" element={<DepositPage />} />
-        </Routes>
-        <Footer />
-      </div>
+      {loading ? (
+        <div className="h-screen w-full flex items-center justify-center bg-black">
+          {!showSkeleton ? (
+            // **Step 1: Logo Animation**
+            <motion.img
+              src="/l.png"
+              alt="App Logo"
+              className="h-24 w-24"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 2 }}
+            />
+          ) : (
+            // **Step 2: Skeleton Loader**
+            <motion.div
+              className="w-full max-w-2xl p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <div className="h-6 w-32 bg-gray-700 rounded-md mb-4 animate-pulse"></div>
+              <div className="h-48 bg-gray-700 rounded-md mb-4 animate-pulse"></div>
+              <div className="h-6 w-64 bg-gray-700 rounded-md mb-2 animate-pulse"></div>
+              <div className="h-6 w-48 bg-gray-700 rounded-md animate-pulse"></div>
+            </motion.div>
+          )}
+        </div>
+      ) : (
+        // **Step 3: Smoothly Show Actual Content**
+        <motion.div
+          key={loading} // Ensures animation triggers on loading change
+          className="main bg-black"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }} // Smooth fade-in
+        >
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactPage />} />
+            <Route path="/sharing-sites-list" element={<ShareSite />} />
+            <Route path="/rental-sites-list" element={<RentalSite />} />
+            <Route path="/self-deposit-and-withdrawal" element={<DepositPage />} />
+          </Routes>
+          <Footer />
+        </motion.div>
+      )}
     </Router>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-// const [loading, setLoading] = useState(true);
-
-// useEffect(() => {
-//   const timer = setTimeout(() => setLoading(false), 2500); // 2.5s ke baad loading complete
-//   return () => clearTimeout(timer);
-// }, []);
-
- // Ensure parent container ka background black ho jab tak content fade-in na ho
-    // <div className="main bg-black">
-    //   <AnimatePresence>
-    //     {loading && (
-    //       <motion.div
-    //         className="fixed inset-0 flex items-center justify-center bg-black z-50"
-    //         initial={{ opacity: 1 }}
-    //         exit={{ opacity: 0 }}
-    //         transition={{ duration: 0.5 }}
-    //       >
-    //         {/* Background Sliding Sections */}
-    //         <motion.div
-    //           className="absolute top-0 left-0 w-1/3 h-full bg-[#0a1128]"
-    //           initial={{ x: "-100%" }}
-    //           animate={{ x: 0 }}
-    //           transition={{ duration: 1 }}
-    //         />
-    //         <motion.div
-    //           className="absolute top-0 left-1/3 w-1/3 h-full bg-[#0e1839]"
-    //           initial={{ x: "-100%" }}
-    //           animate={{ x: 0 }}
-    //           transition={{ duration: 1, delay: 0.2 }}
-    //         />
-    //         <motion.div
-    //           className="absolute top-0 left-2/3 w-1/3 h-full bg-[#0a1128]"
-    //           initial={{ x: "-100%" }}
-    //           animate={{ x: 0 }}
-    //           transition={{ duration: 1, delay: 0.4 }}
-    //         />
-
-    //         {/* Loading Circle */}
-    //         <motion.div
-    //           className="w-16 h-16 border-4 border-t-transparent border-white rounded-full"
-    //           initial={{ rotate: 0 }}
-    //           animate={{ rotate: 360 }}
-    //           transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-    //         />
-    //       </motion.div>
-    //     )}
-    //   </AnimatePresence>
-
-    //   {/* Content is always rendered but hidden until loading complete */}
-    //   <motion.div
-    //     initial={{ opacity: 0 }}
-    //     animate={{ opacity: loading ? 0 : 1 }}
-    //     transition={{ duration: 1 }}
-    //   >
-    //     <Navbar />
-    //     <HomeSection />
-    //     <ContactSection />
-    //     <StatsSection />
-    //     <FutureGamePanel />
-    //     <Footer />
-    //   </motion.div>
-    // </div>

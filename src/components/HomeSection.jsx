@@ -118,6 +118,7 @@
 
 import { useEffect, useState } from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const HomeSection = () => {
   const words = [
@@ -290,20 +291,18 @@ const HomeSection = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 ">
           {[
-            { text: "Sharing Sites List", link: "#" },
-            { text: "Rental Sites List", link: "#" },
-            { text: "Self Deposit & Withdrawal", link: "#" },
+            { text: "Sharing Sites List", link: "/sharing-sites-list" },
+            { text: "Rental Sites List", link: "/rental-sites-list" },
+            { text: "Self Deposit & Withdrawal", link: "/self-deposit-and-withdrawal" },
           ].map((service, index) => (
-            <a
+            <Link
               key={index}
-              href={service.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={service.link}
               className="flex items-center justify-center px-5 py-2 sm:px-8 sm:py-1 bg-[#FFB90C] hover:bg-white rounded-full text-black text-[18px] sm:text-[18px] font-normal transition duration-200 transform hover:scale-105 gap-x-2"
             >
               {service.text}
               <IoIosArrowDroprightCircle size={22} />
-            </a>
+            </Link>
           ))}
         </div>
       </div>

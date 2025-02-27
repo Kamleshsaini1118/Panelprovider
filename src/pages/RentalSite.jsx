@@ -7,7 +7,7 @@ const RentalSite = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Self Deposit & Withdrawal - JPR Panel";
+    document.title = "Rental Sites List - JPR Panel";
 
     // Simulating data fetching
     setTimeout(() => {
@@ -25,20 +25,20 @@ const RentalSite = () => {
     <div className="bg-[#0a1128] h-auto">
       <section className="container mx-auto p-4">
         {/* Section First */}
-        <div className="flex flex-col items-center justify-center mt-20 md:mt-24 gap-4">
+        <div className="flex flex-col items-center justify-center mt-20 md:my-24 gap-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Services
           </h2>
           <span className="flex text-base md:text-lg gap-x-2 font-medium text-white">
-            HOME <FaChevronRight size={18} className="mt-1" /> SELF DEPOSIT & WITHDRAWAL
+            HOME <FaChevronRight size={18} className="mt-1" /> RENTAL SITES LIST
           </span>
         </div>
 
         {/* Section Second */}
         <div ref={ref} className={`transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="flex flex-col items-center justify-center text-center my-14 md:my-20">
+          <div className="flex flex-col items-center justify-center text-center mt-14 md:mt-20">
             <h2 className="text-white text-2xl md:text-6xl font-bold md:mb-10">
-            Self Deposit & Withdrawal
+              Monthly Rental Sites List
             </h2>
 
             {/* Mapping through sample data */}
@@ -65,8 +65,13 @@ const RentalSite = () => {
               // Actual Data
               <>
                 {[
-                  { name: 'Cricodds9.com', img: '/1.jpg', link: 'https://wa.link/qnz6f1' },
-                  { name: 'Fair9bet.com', img: '/2.jpg', link: 'https://wa.link/qnz6f1' },
+                  { name: 'Mydiamondexch.com', img: '/rental/3.jpg', link: 'https://wa.link/qnz6f1', rate: 'Monthly rent 15k , unlimited coins' },
+                  { name: 'Trubet365.in', img: '/rental/4.jpg', link: 'https://wa.link/qnz6f1', rate: 'Monthly rent 18k , unlimited coins' },
+                  { name: 'Betsbhai9.co', img: '/rental/5.png', link: 'https://wa.link/qnz6f1', rate: 'Monthly rent 12k , unlimited coins' },
+                  { name: 'Skysport6.com', img: '/rental/6.png', link: 'https://wa.link/qnz6f1', rate: 'Monthly rent 14k , unlimited coins'},
+                  { name: 'D247.vip', img: '/rental/7.png', link: 'https://wa.link/qnz6f1', rate: 'Monthly rent 12k , unlimited coins' },
+                  { name: 'Worldindia.bet', img: '/rental/8.png', link: 'https://wa.link/qnz6f1', rate: 'Monthly rent 12k , unlimited coins' },
+                  { name: 'Allexch.com', img: '/rental/9.jpg', link: 'https://wa.link/qnz6f1', rate: 'Monthly rent 20k , unlimited coins' },
                 ].map((site, index) => (
                   <div
                     key={index}
@@ -87,15 +92,15 @@ const RentalSite = () => {
                       <p className="text-gray-300 text-xs md:text-sm font-light hover:text-[#d2b15e]">
                         <Link>{site.name}</Link>
                         <br />
-                        <span className="text-[11px] md:text-xs text-[#FFB90C]">Starting INR 0.22</span>
+                        <span className="text-[11px] md:text-xs text-[#FFB90C]">{site.rate}</span>
                       </p>
                     </div>
 
-                    <div className="self-end md:self-center ml-auto">
+                    <div className="self-end md:self-center ml-auto mb-5 md:mb-0">
                       <button>
                         <Link
                           className="flex items-center bg-[#FFB90C] text-black text-sm md:text-lg px-6 py-2 md:px-24 md:py-3 
-                          rounded-full shadow-lg font-thin hover:bg-[#d4ba77] hover:text-black"
+                          rounded-full shadow-lg font-thin hover:bg-[#d4ba77] hover:text-black "
                           to={site.link}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -109,6 +114,10 @@ const RentalSite = () => {
               </>
             )}
           </div>
+        </div>
+
+        <div className="text-[#FFB90C] font-semibold text-4xl md:text-5xl mt-24 text-center">
+          DL-MDL-SMDL-ADMIN
         </div>
       </section>
     </div>
