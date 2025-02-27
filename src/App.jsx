@@ -43,7 +43,7 @@ import ContactPage from "./pages/ContactPage";
 import DepositPage from "./pages/DepositPage";
 import RentalSite from "./pages/RentalSite";
 import ShareSite from "./pages/ShareSite";
-// import logo from "/src/assets/logo.png"; // Apna logo import karein
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -62,13 +62,13 @@ function App() {
   return (
     <Router>
       {loading ? (
-        <div className="h-screen w-full flex items-center justify-center bg-black">
+        <div className="h-screen w-full flex items-center justify-center bg-black -mt-10 md:mt-0">
           {!showSkeleton ? (
             // **Step 1: Logo Animation**
             <motion.img
               src="/l.png"
               alt="App Logo"
-              className="h-24 w-24"
+              className="h-28 w-28 md:h-32 md:w-32"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 2 }}
@@ -107,6 +107,8 @@ function App() {
             <Route path="/self-deposit-and-withdrawal" element={<DepositPage />} />
           </Routes>
           <Footer />
+
+          <ScrollToTop />
         </motion.div>
       )}
     </Router>
