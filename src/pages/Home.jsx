@@ -34,7 +34,7 @@ import FutureGamePanel from "../components/FuturePlan";
 // Animation Variants
 const childVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
 // Reusable Animated Section Component
