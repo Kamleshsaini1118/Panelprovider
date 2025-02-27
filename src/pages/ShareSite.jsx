@@ -182,7 +182,6 @@
 
 // export default ShareSite;
 
-
 import React, { useEffect, useState, memo } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -197,13 +196,6 @@ const siteList = [
   { name: "D247.vip", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 12k, unlimited coins" },
   { name: "Worldindia.bet", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 12k, unlimited coins" },
   { name: "Allexch.com", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 20k, unlimited coins" },
-  { name: "a.com", img: "/1.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 15k, unlimited coins" },
-  { name: "b.in", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 18k, unlimited coins" },
-  { name: "B.co", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 12k, unlimited coins" },
-  { name: "S.com", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 14k, unlimited coins" },
-  { name: "D.vip", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 12k, unlimited coins" },
-  { name: "W.bet", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 12k, unlimited coins" },
-  { name: "A.com", img: "/2.jpg", link: "https://wa.link/qnz6f1", rate: "Monthly rent 20k, unlimited coins" },
 ];
 
 // Reusable Site Card Component
@@ -220,6 +212,7 @@ const SiteCard = memo(({ site }) => (
         <span className="text-[11px] md:text-xs text-[#FFB90C]">{site.rate}</span>
       </p>
     </div>
+    <Link to={site.link} target="_blank" rel="noopener noreferrer" className="ml-auto bg-[#FFB90C] text-black text-sm md:text-lg px-6 py-2 md:px-24 md:py-3 rounded-full hover:bg-[#d4ba77] hover:text-black transition">Create</Link>
   </div>
 ));
 
@@ -267,10 +260,6 @@ const ShareSite = () => {
               : siteList.map((site, index) => <SiteCard key={index} site={site} />)}
           </div>
         </div>
-
-        <div className="text-[#FFB90C] font-semibold text-4xl md:text-5xl mt-24 text-center">
-         ADMIN-MASTER-SUPER MASTER
-         </div>
       </section>
     </div>
   );
