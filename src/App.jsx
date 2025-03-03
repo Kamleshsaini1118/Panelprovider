@@ -44,10 +44,12 @@ import DepositPage from "./pages/DepositPage";
 import RentalSite from "./pages/RentalSite";
 import ShareSite from "./pages/ShareSite";
 import ScrollToTop from "./components/ScrollToTop";
+// import Chatbot from "./components/Chatbot";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [showSkeleton, setShowSkeleton] = useState(false);
+  const [showChatbot, setShowChatbot] = useState(false); // Chatbot state
 
   useEffect(() => {
     setTimeout(() => {
@@ -109,6 +111,18 @@ function App() {
           <Footer />
 
           <ScrollToTop />
+
+          {/* 🔥 Floating Chatbot Button & Chatbot
+          {showChatbot && <Chatbot onClose={() => setShowChatbot(false)} />}
+          {!showChatbot && (
+            <button
+              className="fixed bottom-8 left-6 bg-blue-500 text-white p-3 rounded-full shadow-lg"
+              onClick={() => setShowChatbot(true)}
+            >
+              💬
+            </button>
+          )} */}
+
         </motion.div>
       )}
     </Router>
