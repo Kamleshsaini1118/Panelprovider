@@ -301,7 +301,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <Link to="/" className="md:pl-5">
+                <Link to="/" className="md:pl-5" onClick={() => setMenuOpen(false)}>
                   <div className="flex flex-col items-center">
                     <h1 className="text-white text-[36px] leading-7 md:leading-9 md:text-[48px] font-semibold font-['Schibsted Grotesk']">
                       J <span className="text-[#FFB90C]">P</span> R
