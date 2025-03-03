@@ -97,8 +97,6 @@ const RentalSite = () => {
                           className="flex items-center bg-[#FFB90C] text-black text-sm md:text-lg px-6 py-2 md:px-24 md:py-3 
                           rounded-full shadow-lg font-thin hover:bg-[#d4ba77] hover:text-black"
                           to={site.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
                         >
                           Create
                         </Link>
