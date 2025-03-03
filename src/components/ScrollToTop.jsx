@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
+import { GoArrowUp } from "react-icons/go";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,7 +7,7 @@ const ScrollToTop = () => {
   // Scroll Event Listener
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > -1) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -31,7 +31,7 @@ const ScrollToTop = () => {
           isVisible ? "opacity-100" : "opacity-0"
         }`}
     >
-      <FaArrowUp size={20} />
+      <GoArrowUp size={22} />
     </button>
   );
 };
