@@ -360,6 +360,7 @@ const Navbar = () => {
                     <Link
                       to="/sharing-sites-list"
                       className="block px-4 py-2 hover:text-[#FFB90C]"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Sharing Sites List
                     </Link>
@@ -368,6 +369,7 @@ const Navbar = () => {
                     <Link
                       to="/rental-sites-list"
                       className="block px-4 py-2 hover:text-[#FFB90C]"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Rental Sites List
                     </Link>
@@ -376,6 +378,7 @@ const Navbar = () => {
                     <Link
                       to="/self-deposit-and-withdrawal"
                       className="block px-4 py-2 hover:text-[#FFB90C]"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Self Deposit & Withdrawal
                     </Link>
